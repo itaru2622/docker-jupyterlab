@@ -1,5 +1,5 @@
-img      ?=itaru2622/jupyterlab:bookworm
-base     ?=python:3.12-bookworm
+img      ?=itaru2622/jupyterlab:trixie
+base     ?=python:3.13-trixie
 node_ver ?=20
 
 wDir ?=${PWD}
