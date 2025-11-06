@@ -1,4 +1,4 @@
-ARG base=python:3-bookworm
+ARG base=python:3.13-trixie
 FROM ${base}
 ARG base
 
