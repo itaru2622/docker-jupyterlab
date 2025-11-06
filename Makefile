@@ -1,6 +1,6 @@
 img      ?=itaru2622/jupyterlab:trixie
 base     ?=python:3.13-trixie
-node_ver ?=20
+node_ver ?=22
 
 wDir ?=${PWD}
 port ?=8888
