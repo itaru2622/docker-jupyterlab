@@ -18,7 +18,7 @@ RUN if [[ ${base} != python* ]] ; \
 
 # add packages for jupyterlabs...
 RUN apt  install -y  bash-completion nodejs; \
-    pip3 install     jupyterlab ipywidgets plotly dash jupyterlab_widgets jupyterlab-git itables \
+    pip3 install     jupyterlab ipywidgets plotly dash jupyterlab_widgets jupyterlab-git itables matplotlib \
                      pandas openpyxl pydantic python-dotenv langdetect
 
 ARG workdir=/work
