@@ -4,8 +4,9 @@ node_ver ?=22
 
 wDir ?=${PWD}
 port ?=8888
+cName ?=jupyter-ui
 
 build:
 	docker build --build-arg base=${base} --build-arg node_ver=${node_ver} -t ${img} .
 start:
-	docker run -itd --restart always -p ${port}:8888 -v ${wDir}:${wDir} -w ${wDir} ${img}
+	docker run --name ${cName} -itd --restart always -p ${port}:8888 -v ${wDir}:${wDir} -w ${wDir} ${img}
