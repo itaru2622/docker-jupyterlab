@@ -7,8 +7,7 @@ SHELL ["/bin/bash", "-c"]
 # add apt repo for nodejs
 ARG node_ver=22
 RUN apt  update; apt install -y ca-certificates curl gnupg; \
-    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key > /etc/apt/trusted.gpg.d/nodesource.asc ;\
-    echo "deb https://deb.nodesource.com/node_${node_ver}.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list; \
+    curl -fsSL https://deb.nodesource.com/setup_${node_ver}.x |  bash - ; \
     apt update
 
 RUN if [[ ${base} != python* ]] ; \
